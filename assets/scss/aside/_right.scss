@@ -1,0 +1,21 @@
+.right {
+    order: 3;
+
+    @media (min-width: $large + 1) {
+        width: $right-sidebar-width;
+    }
+
+    @media (max-width: $large) and (min-width: $middle + 1) {
+        width: 100%;
+    }
+
+    @media (max-width: $middle) and (min-width: $xsmall + 1) {
+        width: 50%;
+        padding-left: 7.5px;
+    }
+
+    @media (max-width: $xsmall) {
+        width: 100%;
+    }
+
+}

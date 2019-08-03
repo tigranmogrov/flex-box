@@ -1,0 +1,44 @@
+.widgets-search {
+
+    form {
+        position: relative;
+        border-radius: 7px;
+        margin: 10px 0 5px 0;
+
+        input {
+            background: rgba($light-color, 0.15);
+            padding: 7px 8px 7px 40px;
+            border: 1px solid rgba(#fff, 0.23);
+            border-radius: 4px;
+            font-size: 12px;
+            width: 100%;
+            outline: none;
+            color: rgba($light-color, 0.80);
+
+            &:focus {
+                background: rgba($light-color, 0.28);
+                color: $light-color;
+            }
+
+            &::placeholder {
+                color: rgba($light-color, 0.80);
+            }
+
+
+        }
+
+        button {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            bottom: 1px;
+            cursor: pointer;
+            padding: 5px 7px;
+            background-color: transparent;
+            border: none;
+            border-right: 1px solid rgba($light-color, .23);
+            color: $light-color;
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.widgets-categories {
+
+
+    ul {
+        padding: 0;
+        line-height: 2;
+
+        li {
+            transition: background-color 0.3s, border-radius 0.3s;
+
+            &:hover {
+                background-color: rgba($dark-color, 0.44);
+                border-radius: 3px;
+            }
+
+            &:hover a {
+                padding-left: 15px;
+                text-shadow: 0px 1px 3px $dark-color;
+                color: $main-color-highlighted;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        padding: 5px 0;
+        transition: padding-left 0.8s;
+    }
+}

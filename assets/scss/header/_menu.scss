@@ -1,0 +1,123 @@
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @extend %color-item;
+
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media (min-width: $xsmall + 1) {
+            display: flex;
+        }
+
+        @media (max-width: $small) {
+            display: none;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .active a {
+            background-color: rgba($dark-color, 0.44);
+            border-radius: 3px;
+            color: $main-color-highlighted;
+            text-shadow: 1px 2px 3px #000;
+        }
+
+
+
+        &-item {
+            font-size: 1rem;
+            margin: 5px;
+
+            @media (max-width: $small) {
+                &:last-child {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            padding: 10px 15px;
+            transition: background-color 0.3s, border-radius 0.3s, text-shadow 0.3s;
+
+            &:hover {
+                background-color: rgba($dark-color, 0.44);
+                border-radius: 3px;
+                color: $main-color-highlighted;
+                text-shadow: 1px 2px 3px #000;
+            }
+        }
+    }
+}
+
+
+
+
+.header-menu__btn {
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($dark-color, 0.25);
+
+
+    @media (min-width: $small + 1) {
+        display: none;
+    }
+
+    @media (max-width: $small) {
+        display: flex;
+    }
+
+    &-item {
+        position: relative;
+
+        width: 60%;
+        height: 2px;
+        margin: 2px 0;
+
+        transition: 0.5s;
+
+        background-color: $light-color;
+
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+
+    &.active .header-menu__btn-item {
+        &:first-child {
+            transform: translate(-15px);
+            opacity: 0;
+        }
+
+        &:last-child {
+            transform: translate(15px);
+            opacity: 0;
+        }
+
+        &:nth-child(2) {
+            top: 2px;
+            transform: rotate(-135deg);
+        }
+
+        &:nth-child(3) {
+            display: block;
+            top: -4px;
+            transform: rotate(135deg);
+        }
+    }
+}

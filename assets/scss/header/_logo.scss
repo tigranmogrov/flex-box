@@ -1,0 +1,31 @@
+.header-logo {
+    text-align: center;
+    padding: 45px 15px;
+
+    img {
+        width: 400px;
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        display: block;
+        letter-spacing: 4px;
+        font-weight: 300;
+        color: $light-color;
+        margin: 0 0 30px 0;
+
+        @media(min-width: $small + 1) {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        letter-spacing: 0.238em;
+        font-family: $base-font;
+        margin: 0;
+    }
+
+
+
+}
