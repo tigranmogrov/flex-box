@@ -1,4 +1,10 @@
 .widgets-new {
+    padding-left: 0;
+    padding-right: 0;
+
+    h3 {
+        padding-left: 15px;
+    }
 
     &-block {
         padding-bottom: 10px;
@@ -15,7 +21,7 @@
 
         &__wrap {
             transition: background 0.5s;
-            padding-bottom: 5px;
+            padding: 0 15px 5px 15px;
 
             &:hover {
                 background: radial-gradient(ellipse at center, rgba($dark-color, 0.50) 0%, rgba($dark-color, 0) 100%);
